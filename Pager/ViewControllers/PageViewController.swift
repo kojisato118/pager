@@ -14,18 +14,18 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource{
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let vc = self.storyboard!.instantiateViewControllerWithIdentifier("ContentsViewController")
-        self.setViewControllers([vc], direction: .Forward, animated: true, completion: nil)
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "ContentsViewController")
+        self.setViewControllers([vc], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
     }
 
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        let vc = self.storyboard!.instantiateViewControllerWithIdentifier("ContentsViewController")
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "ContentsViewController")
         return vc
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        let vc = self.storyboard!.instantiateViewControllerWithIdentifier("ContentsViewController")
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "ContentsViewController")
         return vc
     }
 }

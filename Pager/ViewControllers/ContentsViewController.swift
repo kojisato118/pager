@@ -21,14 +21,14 @@ class ContentsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setNavigationbarTransparent(transparent : Bool){
+    func setNavigationbarTransparent(_ transparent : Bool){
         // http://qiita.com/mochizukikotaro/items/a4405701dcc706fd643e
         
         if transparent{
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
             self.navigationController?.navigationBar.shadowImage = UIImage()
         }else{
-            self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
+            self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
             self.navigationController?.navigationBar.shadowImage = nil
         }
     }
